@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+body {
+    background-color: #0a192f; /* Dark blue background */
+    color: #ccd6f6; /* Light gray/white text */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #0a192f !important; /* Match navbar background color with the body */
+}
+
+.navbar-brand, .nav-link, .btn-outline-secondary {
+    color: #64ffda !important; /* Light blue for hyperlinks */
+    margin: 0 15px;
+    font-size: 1.5rem;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .btn-outline-secondary {
+    line-height: 1.5; /* Match line-height to center button */
+    padding: 0.5rem 1.25rem; /* Ensure padding matches other nav items */
+    margin: 0px;
+}
+
+.header {
+    padding: 5rem 0; /* Reduce padding from top */
+    background-color: #0a192f;
+    color: #ccd6f6;
+    text-align: left; /* Align text to the left */
+    margin-left: 250px; /* Add left margin */
+}
+
+.press-start {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem; /* Increase font size */
+    color: #64ffda; /* Light blue for "Hi, my name is" */
+}
+
+.header .display-1 {
+    color: #ccd6f6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 6rem; /* Increase font size */
+}
+
+.header .lead {
+    font-size: 6rem; /* Increase font size */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    opacity: 0.5; /* Reduce opacity */
+    white-space: nowrap;
+    margin-bottom: 1.5rem;
+}
+
+.header p {
+    color: #ccd6f6; /* Light gray/white text for paragraphs */
+    text-align: left; /* Ensure text alignment to the left */
+    max-width: 600px;
+    margin: 0 0 2rem 0; /* Adjust margins */
+    font-size: 1.5rem; /* Increase font size */
+}
+.header .welcome-text{
+    font-size: 1.5rem;
+}
+
+.header .btn-lg {
+    font-size: 2rem; /* Increase font size */
+    border-color: #64ffda; /* Light blue border for buttons */
+    color: #64ffda;
+    padding: 15px 20px;
+}
+
+.header .btn-lg:hover {
+    background-color: #64ffda; /* Light blue background on hover */
+    color: #0a192f; /* Dark blue text on hover */
+}
+
+.projects-section {
+    padding: 1rem 0;
+}
+
+.projects-section .card {
+    margin-bottom: 20px;
+    background-color: #112240; /* Slightly lighter dark blue for cards */
+    color: #ccd6f6;
+}
+.analysis-section .card {
+    margin-bottom: 20px;
+    background-color: #112240; /* Slightly lighter dark blue for cards */
+    color: #ccd6f6;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure full height for all cards */
+}
+.card .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* Ensure card body takes up remaining space */
+}
+
+.projects-section .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.analysis-section .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .card-text{
+    font-size:1.25rem;
+}
+.card .card-title{
+    font-size:1.75rem;
+    margin-bottom:25px;
+}
+
+.contact-section {
+    padding: 5rem 0;
+}
+
+.contact-section h1 {
+    color: #ccd6f6;
+}
+
+.contact-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-section li {
+    margin: 1rem 0;
+}
+
+.contact-section a {
+    color: #64ffda;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+.card {
+    min-height: 500px; /* Adjust this value as needed */
+    margin-bottom: 20px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    flex-grow: 1;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.about-me {
+    text-align: left; /* Align text to the left */
+    margin-left: 250px; /* Add left margin */
+}
+
+.about-me h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #64ffda;
+    margin-bottom: 2rem;
+}
+
+.about-me p, .about-me h3 {
+    font-size: 1.5rem;
+    color: #ccd6f6;
+    margin-bottom: 1.5rem;
+}
+
+.certificates img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+.certificates {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.certificate-item {
+    text-align: center;
+    width: 48%; /* Adjust as needed to fit your layout */
+}
+
+.certificate-item img {
+    width: 100%;
+    height: auto;
+}
+
+.certificate-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #ccd6f6;
+}
+
+.contact-item {
+    margin-bottom: 2rem;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #64ffda;
+    font-size: 1.5rem; /* Increase font size */
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-icon {
+    width: 70px; /* Increase icon size */
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    font-size: 1.25rem; /* Increase description font size */
+}
+
