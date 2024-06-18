@@ -10,6 +10,8 @@ body {
 
 .navbar {
     background-color: #0a192f !important; /* Match navbar background color with the body */
+    display: flex;
+    justify-content: space-between; /* Ensure navbar content is distributed evenly */
 }
 
 .navbar-brand, .nav-link, .btn-outline-secondary {
@@ -123,13 +125,20 @@ body {
     font-size: 1.25rem; /* Adjust the font size of the description */
     text-align: center;
 }
+.align-navbar {
+    margin-right: 10px; /* Adjust the margin to align with the content */
+    /* margin-left:220px; */
+}
 
 @media (max-width: 768px) {
     .header, .about-me, .introduction, .certificates, .teaching, .hobbies {
         margin-left: 250; /* Reset left margin on small screens */
-        padding: 2rem 1rem; /* Adjust padding for small screens */
+        padding: 0rem 1rem; /* Adjust padding for small screens */
     }
-
+    .align-navbar {
+        margin-left: 235px; /* Reset left margin on small screens */
+        margin-right: 0; /* Reset right margin on small screens */
+    }
     .header .display-1 {
         font-size: 2.5rem; /* Reduce font size for small screens */
     }
