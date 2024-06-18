@@ -86,7 +86,53 @@ body {
     background-color: #64ffda; /* Light blue background on hover */
     color: #0a192f; /* Dark blue text on hover */
 }
+.same-height-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure full height for all cards */
+}
 
+.same-height-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* Ensure card body takes up remaining space */
+}
+
+.header .display-1, .header .lead {
+    max-width: 100%;
+    width: 100%;
+}
+
+.header p, .about-me p, .about-me h3 {
+    font-size: 1.5rem; /* Maintain the original font size */
+}
+
+.about-me .certificate-item {
+    display: inline-block;
+    width: 48%; /* Adjust the width as needed */
+    vertical-align: top;
+}
+
+.about-me .certificate-item img {
+    width: 100%; /* Ensure the images take the full width of their container */
+}
+
+.about-me .certificate-item p {
+    font-size: 1.25rem; /* Adjust the font size of the description */
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header, .about-me {
+        margin-left: 0; /* Reset left margin on small screens */
+        padding: 2rem 1rem; /* Adjust padding for small screens */
+    }
+    .navbar-nav .nav-item {
+        margin-bottom: 1rem; /* Add spacing between nav items in sidebar */
+    }
+}
 .projects-section {
     padding: 1rem 0;
 }
