@@ -68,7 +68,7 @@ body {
     color: #ccd6f6; /* Light gray/white text for paragraphs */
     text-align: left; /* Ensure text alignment to the left */
     max-width: 600px;
-    margin: 0 0 2rem 0; /* Adjust margins */
+    margin: 0 0 250px 0; /* Adjust margins */
     font-size: 1.5rem; /* Increase font size */
 }
 .header .welcome-text{
@@ -125,14 +125,28 @@ body {
 }
 
 @media (max-width: 768px) {
-    .header, .about-me {
-        margin-left: 0; /* Reset left margin on small screens */
+    .header, .about-me, .introduction, .certificates, .teaching, .hobbies {
+        margin-left: 250; /* Reset left margin on small screens */
         padding: 2rem 1rem; /* Adjust padding for small screens */
     }
+
+    .header .display-1 {
+        font-size: 2.5rem; /* Reduce font size for small screens */
+    }
+
+    .header .lead {
+        font-size: 2rem; /* Reduce font size for small screens */
+    }
+
+    .header p {
+        font-size: 1.75rem; /* Increase font size for small screens */
+    }
+
     .navbar-nav .nav-item {
         margin-bottom: 1rem; /* Add spacing between nav items in sidebar */
     }
 }
+
 .projects-section {
     padding: 1rem 0;
 }
@@ -142,39 +156,39 @@ body {
     background-color: #112240; /* Slightly lighter dark blue for cards */
     color: #ccd6f6;
 }
+
 .analysis-section .card {
     margin-bottom: 20px;
     background-color: #112240; /* Slightly lighter dark blue for cards */
     color: #ccd6f6;
 }
-.card{
+
+.card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%; /* Ensure full height for all cards */
 }
-.card .card-body{
+
+.card .card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1; /* Ensure card body takes up remaining space */
 }
 
-.projects-section .card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-.analysis-section .card-img-top {
+.projects-section .card-img-top, .analysis-section .card-img-top {
     height: 200px;
     object-fit: cover;
 }
 
-.card .card-text{
-    font-size:1.25rem;
+.card .card-text {
+    font-size: 1.25rem;
 }
-.card .card-title{
-    font-size:1.75rem;
-    margin-bottom:25px;
+
+.card .card-title {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
 }
 
 .contact-section {
@@ -252,6 +266,7 @@ body {
     height: auto;
     margin-bottom: 1rem;
 }
+
 .certificates {
     display: flex;
     justify-content: space-between;
@@ -297,4 +312,3 @@ body {
 .contact-item p {
     font-size: 1.25rem; /* Increase description font size */
 }
-
