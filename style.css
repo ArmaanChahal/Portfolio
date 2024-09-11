@@ -17,7 +17,7 @@ body {
 .navbar-brand, .nav-link, .btn-outline-secondary {
     color: #64ffda !important; /* Light blue for hyperlinks */
     margin: 0 15px;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .navbar-nav {
@@ -32,7 +32,7 @@ body {
 
 .navbar-nav .btn-outline-secondary {
     line-height: 1.5; /* Match line-height to center button */
-    padding: 0.5rem 1.25rem; /* Ensure padding matches other nav items */
+    padding: 0.1rem 1.25rem; /* Ensure padding matches other nav items */
     margin: 0px;
 }
 
@@ -41,7 +41,7 @@ body {
     background-color: #0a192f;
     color: #ccd6f6;
     text-align: left; /* Align text to the left */
-    margin-left: 250px; /* Add left margin */
+    margin-left: 20px; /* Add left margin */
 }
 
 .press-start {
@@ -54,11 +54,11 @@ body {
     color: #ccd6f6;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 6rem; /* Increase font size */
+    font-size: 4rem; /* Increase font size */
 }
 
 .header .lead {
-    font-size: 6rem; /* Increase font size */
+    font-size: 4rem; /* Increase font size */
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     opacity: 0.5; /* Reduce opacity */
@@ -71,14 +71,14 @@ body {
     text-align: left; /* Ensure text alignment to the left */
     max-width: 600px;
     margin: 0 0 250px 0; /* Adjust margins */
-    font-size: 1.5rem; /* Increase font size */
+    font-size: 1em; /* Increase font size */
 }
 .header .welcome-text{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .header .btn-lg {
-    font-size: 2rem; /* Increase font size */
+    font-size: 1.25rem; /* Increase font size */
     border-color: #64ffda; /* Light blue border for buttons */
     color: #64ffda;
     padding: 15px 20px;
@@ -108,7 +108,7 @@ body {
 }
 
 .header p, .about-me p, .about-me h3 {
-    font-size: 1.5rem; /* Maintain the original font size */
+    font-size: 1rem; /* Maintain the original font size */
 }
 
 .about-me .certificate-item {
@@ -122,7 +122,7 @@ body {
 }
 
 .about-me .certificate-item p {
-    font-size: 1.25rem; /* Adjust the font size of the description */
+    font-size: 1rem; /* Adjust the font size of the description */
     text-align: center;
 }
 .align-navbar {
@@ -141,15 +141,15 @@ body {
         margin-right: 0; /* Reset right margin on small screens */
     }
     .header .display-1 {
-        font-size: 2.5rem; /* Reduce font size for small screens */
+        font-size: 1.1rem; /* Reduce font size for small screens */
     }
 
     .header .lead {
-        font-size: 2rem; /* Reduce font size for small screens */
+        font-size: 1.1rem; /* Reduce font size for small screens */
     }
 
     .header p {
-        font-size: 1.75rem; /* Increase font size for small screens */
+        font-size: 1.1rem; /* Increase font size for small screens */
     }
 
     .navbar-nav .nav-item {
@@ -197,7 +197,7 @@ body {
 }
 
 .card .card-title {
-    font-size: 1.75rem;
+    font-size: 1.2rem;
     margin-bottom: 25px;
 }
 
@@ -255,12 +255,12 @@ body {
 
 .about-me {
     text-align: left; /* Align text to the left */
-    margin-left: 250px; /* Add left margin */
+    margin-left: 20px; /* Add left margin */
 }
 
 .about-me h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     color: #64ffda;
     margin-bottom: 2rem;
 }
