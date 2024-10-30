@@ -14,6 +14,18 @@ body {
     justify-content: space-between; /* Ensure navbar content is distributed evenly */
 }
 
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
 .navbar-brand, .nav-link, .btn-outline-secondary {
     color: #64ffda !important; /* Light blue for hyperlinks */
     margin: 0 15px;
@@ -132,28 +144,32 @@ body {
 }
 
 @media (max-width: 768px) {
-    .header, .about-me, .introduction, .certificates, .teaching, .hobbies {
-        margin-left: 250; /* Reset left margin on small screens */
-        padding: 0rem 1rem; /* Adjust padding for small screens */
+    body {
+        font-size: 0.8rem; /* Decrease base font size */
     }
-    .align-navbar {
-        margin-left: 235px; /* Reset left margin on small screens */
-        margin-right: 0; /* Reset right margin on small screens */
+
+    .navbar-brand, .nav-link, .btn-outline-secondary {
+        font-size: 0.9rem; /* Adjust navbar text */
     }
+
     .header .display-1 {
-        font-size: 1.1rem; /* Reduce font size for small screens */
+        font-size: 2.5rem; /* Smaller title */
     }
 
     .header .lead {
-        font-size: 1.1rem; /* Reduce font size for small screens */
+        font-size: 1.2rem; /* Reduce subtitle size */
     }
 
-    .header p {
-        font-size: 1.1rem; /* Increase font size for small screens */
+    .about-me p, .about-me h3 {
+        font-size: 1rem; /* Adjust text size in 'About Me' */
     }
 
-    .navbar-nav .nav-item {
-        margin-bottom: 1rem; /* Add spacing between nav items in sidebar */
+    .btn-lg {
+        font-size: 1rem; /* Smaller buttons */
+    }
+
+    .certificate-item p {
+        font-size: 0.9rem; /* Smaller certificate descriptions */
     }
 }
 
