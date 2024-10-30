@@ -21,3 +21,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+// Fade in when the page loads
+window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('fade-in');
+});
+
+// Fade out before navigating away
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+
+        // If it's an internal link (not a new tab)
+        if (href && !href.startsWith('http')) {
+            e.preventDefault();
+            document.body.classList.remove('fade-in');
+            setTimeout(() => {
+                window.location.href = href;
+            }, 500); // Match with CSS transition duration
+        }
+    });
+});
