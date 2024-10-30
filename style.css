@@ -6,8 +6,8 @@ body {
     background-color: #0a192f; /* Dark blue background */
     color: #ccd6f6; /* Light gray/white text */
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .navbar {
