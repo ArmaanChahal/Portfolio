@@ -21,23 +21,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-// Fade in when the page loads
-window.addEventListener('DOMContentLoaded', () => {
+// Ensure the body fades in on page load
+window.addEventListener('load', () => {
     document.body.classList.add('fade-in');
 });
 
-// Fade out before navigating away
+// Add fade-out effect before navigating away
 document.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
 
-        // If it's an internal link (not a new tab)
-        if (href && !href.startsWith('http')) {
+        // Only apply the fade-out if it's an internal link
+        if (href && !href.startsWith('http') && !link.hasAttribute('target')) {
             e.preventDefault();
-            document.body.classList.remove('fade-in');
+            document.body.classList.remove('fade-in'); // Trigger fade-out
             setTimeout(() => {
                 window.location.href = href;
-            }, 500); // Match with CSS transition duration
+            }, 500); // Wait for the fade-out to complete (same duration as CSS transition)
         }
     });
 });
+
