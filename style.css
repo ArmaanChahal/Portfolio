@@ -6,6 +6,8 @@ body {
     background-color: #0a192f; /* Dark blue background */
     color: #ccd6f6; /* Light gray/white text */
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .navbar {
@@ -20,6 +22,9 @@ body, html {
     padding: 0;
 }
 
+body.fade-in {
+    opacity: 1;
+}
 .container {
     max-width: 100%;
     padding: 0 10px;
