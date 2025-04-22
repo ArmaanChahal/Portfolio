@@ -616,4 +616,18 @@ a:hover {
   .nav-item {
     margin: 0;                 
   }
-  
+  /* replace your existing .about-grid rule */
+.about-grid {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    gap: 50px;
+    align-items: center; /* vertically center text & image */
+  }
+  .profile-img {
+    width: 100%;           /* fill the 35% column */
+    aspect-ratio: 1 / 1;   /* force a square box */
+    object-fit: cover;     /* crop to cover the box */
+    border-radius: 50%;    /* turn it into a circle */
+    display: block;        /* remove any inline gaps */
+  }
+    
