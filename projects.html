@@ -3,162 +3,368 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
+    <title>Projects | Armaan Chahal</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">My Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a class="navbar-brand" href="index.html"></a>
+            <button class="navbar-toggler" id="navbarToggler">
+                <i class="fas fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="projects.html">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacts.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-secondary" href="resume_final.pdf">Resume</a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="navbar-nav" id="navbarNav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacts.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="resume_portfolio.pdf" target="_blank">Resume</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
-    <div class="container mt-5 projects-section">
-        <h1 class="text-center mb-5">My Projects</h1>
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <img src="images/weather-website.png" class="card-img-top" alt="Weather Website" loading="lazy">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Weather Website</h3>
-                        <p class="card-text">A weather website which provides real-time weather information including temperature, 
-                            forecasts, and wind speed for selected cities. The interface updates dynamically with weather-specific background images.</p>
-                        <a href="https://armaanchahal.github.io/Weather-website/" class="btn btn-primary" target="_blank">Live Demo</a>
-                        <a href="https://github.com/ArmaanChahal/Weather-website" class="btn btn-secondary" target="_blank">GitHub</a>
+    <!-- Projects Section -->
+    <section class="projects section">
+        <div class="container">
+            <h2 class="section-title animate">My Projects</h2>
+            <p class="animate delay-1" style="max-width: 700px; margin-bottom: 50px;">
+                Here's a collection of projects I've worked on (NOT A COMPLETE LIST), ranging from web development to algorithms and data analysis.
+            </p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card animate">
+                    <img src="images/MRI.png" alt="MRI Scan" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">NeuroVision AI</h3>
+                        <p class="project-description">
+                            An application which takes in an MRI and tells you the type of Brain Cancer you have, trained using 
+                            Pytorch using EC2 GPUs and the model is saved locally but can be provided if asked. uses flask on the backend to connect
+                            the model.
+                        </p>
+                        <div class="project-tech">
+                            <span>AWS</span>
+                            <span>Flask</span>
+                            <span>PyTorch</span>
+                            <span>HTML CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://armaanchahal.github.io/MRI-scan/" target="_blank" class="btn btn-primary">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/ArmaanChahal/MRI-scan" target="_blank" class="btn btn-secondary">
+                                Code
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <img src="images/quiz.png" class="card-img-top" alt="java quiz login portal" loading="lazy">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Quiz Portal</h3>
-                        <p class="card-text">A dynamic quiz application built in Java, featuring user login and signup, 
-                            a timer, and question navigation. The quiz pulls questions from a CSV file, tracks attempts 
-                             and a leaderboard.</p>
-                        <a href="https://github.com/ArmaanChahal/Quiz" class="btn btn-primary" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <img src="images/login.jpg" class="card-img-top" alt="Employee login portal" loading="lazy">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Employee Login</h3>
-                        <p class="card-text">A Java application with employee registration, login authentication, and 
-                            SQL database management. Redirects to a welcome page on success and shows error messages for invalid attempts.</p>
-                        <a href="https://github.com/ArmaanChahal" class="btn btn-primary" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <img src="images/vacuum.png" class="card-img-top" alt="image of a maze with walls">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Vacuum Cleaner Simulation</h3>
-                        <p class="card-text">A Python-based simulation that uses BFS, DFS, and A* etc. algorithms to navigate and clean a grid efficiently, 
-                            demonstrating pathfinding strategies and optimal coverage.</p>
-                        <a href="https://github.com/ArmaanChahal/Vacuum-Cleaner" class="btn btn-primary" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <img src="images/tictactoe.png" class="card-img-top" alt="image of a tictactoe game">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Tic Tac Toe</h3>
-                        <p class="card-text"> A C++ implementation of Tic-Tac-Toe with a smart algorithm that ensures optimal moves. The program 
-                            allows two players or a player vs. computer mode, focusing on game logic and win/draw detection.</p>
-                        <a href="https://github.com/ArmaanChahal/TicTacToe-bot" class="btn btn-primary" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <img src="images/connect-N.png" class="card-img-top" alt="Connect-N">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Connect-N</h3>
-                        <p class="card-text">A Connect N game where users can set the board size and the number of tiles needed in a line to win.
-                            Includes a time analysis using R to see how long it takes to initialize the board as size increases.</p>
-                        <a href="https://github.com/ArmaanChahal/Connect-N" class="btn btn-primary" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <img src="images/calculator.png" class="card-img-top" alt="Calculator">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Calculator</h3>
-                        <p class="card-text">A calculator inspired by Apple, featuring a history button, input display, and a scientific calculator mode.</p>
-                        <a href="https://armaanchahal.github.io/Calculator/" class="btn btn-primary" target="_blank">Live Demo</a>
-                        <a href="https://github.com/ArmaanChahal/Calculator" class="btn btn-secondary" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <img src="images/temp-convertor.png" class="card-img-top" alt="Temperature Converter">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Temperature Converter</h3>
-                        <p class="card-text">A temperature converter that switches between Fahrenheit and Celsius, providing comments on the temperature.</p>
-                        <a href="https://armaanchahal.github.io/temp-converter/" class="btn btn-primary" target="_blank">Live Demo</a>
-                        <a href="https://github.com/ArmaanChahal/temp-converter" class="btn btn-secondary" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container mt-5 analysis-section">
-        <h1 class="text-center mb-5">Analysis</h1>
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <img src="images/NP-hard-a.png" class="card-img-top" alt="Analysis 1">
-                    <div class="card-body">
-                        <h5 class="card-title">NP hard analysis</h5>
-                        <p class="card-text">A study of the NP hard problem where getting close is good enough because completing
-                            the problem would take a long time.</p>
-                        <a href="https://github.com/ArmaanChahal/NP-hard-time-analysis" class="btn btn-secondary">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <img src="images/MCDM.png" class="card-img-top" alt="Analysis 2">
-                    <div class="card-body">
-                        <h5 class="card-title">MCDM using topsis</h5>
-                        <p class="card-text">This analysis project utilizes the TOPSIS method for multi-criteria decision making. 
-                            It demonstrates the use of Python for data analysis and decision-making processes.</p>
-                        <a href="https://github.com/ArmaanChahal/MCDM-using-topsis" class="btn btn-secondary">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more analysis cards as needed -->
-        </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+                <div class="project-card animate">
+                    <img src="images/Skin-lesion.png" alt="Skin Lesion" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">DermaScan AI</h3>
+                        <p class="project-description">
+                            An application that takes in a photo of a skin lesion and performs and ABCD analysis on it to determine
+                            if you have any disease. Model is trained using TensorFlow on EC2 GPUs and is saved locally but can be provided if asked.
+                        </p>
+                        <div class="project-tech">
+                            <span>AWS</span>
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>HTML CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://armaanchahal.github.io/Skin-Lesion-AI/" target="_blank" class="btn btn-primary">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/ArmaanChahal/Skin-Lesion-AI" target="_blank" class="btn btn-secondary">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card animate">
+                    <img src="images/weather-website.png" alt="Weather Website" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Weather Website</h3>
+                        <p class="project-description">
+                            A weather website which provides real-time weather information including temperature, 
+                            forecasts, and wind speed for selected cities. The interface updates dynamically with 
+                            weather-specific background images.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://armaanchahal.github.io/Weather-website/" target="_blank" class="btn btn-primary">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/ArmaanChahal/Weather-website" target="_blank" class="btn btn-secondary">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate delay-1">
+                    <img src="images/quiz.png" alt="Quiz Portal" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Quiz Portal</h3>
+                        <p class="project-description">
+                            A dynamic quiz application built in Java, featuring user login and signup, 
+                            a timer, and question navigation. The quiz pulls questions from a CSV file, 
+                            tracks attempts and includes a leaderboard.
+                        </p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Swing</span>
+                            <span>CSV</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ArmaanChahal/Quiz" target="_blank" class="btn btn-secondary">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate delay-1">
+                    <img src="images/login.jpg" alt="Employee Login Portal" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Employee Login</h3>
+                        <p class="project-description">
+                            A Java application with employee registration, login authentication, and 
+                            SQL database management. Redirects to a welcome page on success and shows 
+                            error messages for invalid attempts.
+                        </p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>SQL</span>
+                            <span>Authentication</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ArmaanChahal" target="_blank" class="btn btn-secondary">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate delay-2">
+                    <img src="images/vacuum.png" alt="Vacuum Cleaner Simulation" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Vacuum Cleaner Simulation</h3>
+                        <p class="project-description">
+                            A Python-based simulation that uses BFS, DFS, and A* algorithms to navigate 
+                            and clean a grid efficiently, demonstrating pathfinding strategies and optimal coverage.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Algorithms</span>
+                            <span>Pathfinding</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ArmaanChahal/Vacuum-Cleaner" target="_blank" class="btn btn-secondary">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate delay-2">
+                    <img src="images/tictactoe.png" alt="Tic Tac Toe" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Tic Tac Toe</h3>
+                        <p class="project-description">
+                            A C++ implementation of Tic-Tac-Toe with a smart algorithm that ensures optimal moves. 
+                            The program allows two players or a player vs. computer mode, focusing on game logic 
+                            and win/draw detection.
+                        </p>
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>Game Development</span>
+                            <span>AI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ArmaanChahal/TicTacToe-bot" target="_blank" class="btn btn-secondary">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate delay-3">
+                    <img src="images/connect-N.png" alt="Connect-N" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Connect-N</h3>
+                        <p class="project-description">
+                            A Connect N game where users can set the board size and the number of tiles 
+                            needed in a line to win. Includes a time analysis using R to see how long 
+                            it takes to initialize the board as size increases.
+                        </p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Game Development</span>
+                            <span>R</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ArmaanChahal/Connect-N" target="_blank" class="btn btn-secondary">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate delay-3">
+                    <img src="images/calculator.png" alt="Calculator" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Calculator</h3>
+                        <p class="project-description">
+                            A calculator inspired by Apple, featuring a history button, input display, 
+                            and a scientific calculator mode.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://armaanchahal.github.io/Calculator/" target="_blank" class="btn btn-primary">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/ArmaanChahal/Calculator" target="_blank" class="btn btn-secondary">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate delay-3">
+                    <img src="images/temp-convertor.png" alt="Temperature Converter" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Temperature Converter</h3>
+                        <p class="project-description">
+                            A temperature converter that switches between Fahrenheit and Celsius, 
+                            providing comments on the temperature.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://armaanchahal.github.io/temp-converter/" target="_blank" class="btn btn-primary">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/ArmaanChahal/temp-converter" target="_blank" class="btn btn-secondary">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analysis Section -->
+    <section class="projects section" style="background-color: var(--secondary-bg);">
+        <div class="container">
+            <h2 class="section-title animate">Analysis Projects</h2>
+            <p class="animate delay-1" style="max-width: 700px; margin-bottom: 50px;">
+                Technical analyses and research projects exploring algorithms, data science, and computational methods.
+            </p>
+            
+            <div class="projects-grid">
+                <!-- Analysis 1 -->
+                <div class="project-card animate">
+                    <img src="images/NP-hard-a.png" alt="NP Hard Analysis" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">NP Hard Analysis</h3>
+                        <p class="project-description">
+                            A study of the NP hard problem where getting close is good enough because completing
+                            the problem would take a long time.
+                        </p>
+                        <div class="project-tech">
+                            <span>Algorithms</span>
+                            <span>Complexity Theory</span>
+                            <span>Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ArmaanChahal/NP-hard-time-analysis" target="_blank" class="btn btn-secondary">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Analysis 2 -->
+                <div class="project-card animate delay-1">
+                    <img src="images/MCDM.png" alt="MCDM using TOPSIS" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">MCDM using TOPSIS</h3>
+                        <p class="project-description">
+                            This analysis project utilizes the TOPSIS method for multi-criteria decision making. 
+                            It demonstrates the use of Python for data analysis and decision-making processes.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Data Analysis</span>
+                            <span>TOPSIS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ArmaanChahal/MCDM-using-topsis" target="_blank" class="btn btn-secondary">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Designed & Built by Armaan Chahal</p>
+                <div class="social-links">
+                    <a href="https://github.com/ArmaanChahal" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/armaanchahal" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:armaanchahal1501@gmail.com" target="_blank" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
-
 </body>
 </html>

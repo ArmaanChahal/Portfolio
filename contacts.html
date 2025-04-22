@@ -3,71 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
+    <title>Contact | Armaan Chahal</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">My Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a class="navbar-brand" href="index.html"></a>
+            <button class="navbar-toggler" id="navbarToggler">
+                <i class="fas fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contacts.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-secondary" href="resume_final.pdf">Resume</a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="navbar-nav" id="navbarNav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contacts.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="resume_portfolio.pdf" target="_blank">Resume</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
-    <div class="container mt-5 contact-section">
-        <h1 class="text-center mb-5">Contact Me</h1>
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-3 mb-3 text-center contact-item">
-                <a href="https://github.com/ArmaanChahal" target="_blank">
-                    <img src="images/github-logo.png" alt="GitHub" class="contact-icon">
-                    <p>GitHub</p>
-                </a>
-                <p>Check out my projects and repositories.</p>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 mb-3 text-center contact-item">
-                <a href="https://www.linkedin.com/in/armaanchahal" target="_blank">
-                    <img src="images/linkedin-logo.png" alt="LinkedIn" class="contact-icon">
-                    <p>LinkedIn</p>
-                </a>
-                <p>Connect with me professionally.</p>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 mb-3 text-center contact-item">
-                <a href="https://discordapp.com/users/unorthodoxruler" target="_blank">
-                    <img src="images/discord-logo.png" alt="Discord" class="contact-icon">
-                    <p>Discord</p>
-                </a>
-                <p>Chat with me on Discord.</p>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 mb-3 text-center contact-item">
-                <a href="mailto:armaanchahal1501@gmail.com" target="_blank">
-                    <img src="images/gmail-logo.png" alt="Gmail" class="contact-icon">
-                    <p>Gmail</p>
-                </a>
-                <p>Send me an email.</p>
+    <!-- Contact Section -->
+    <section class="contact section">
+        <div class="container">
+            <h2 class="section-title animate">Get In Touch</h2>
+            <p class="contact-subtitle animate delay-1">
+                I'm currently looking for new opportunities in back-end development and software engineering. 
+                Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            </p>
+            
+            <div class="contact-grid animate delay-2">
+                <!-- Email -->
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <i class="fas fa-envelope contact-icon"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>Reach out directly via email at armaanchahal1501@gmail.com</p>
+                    <a href="mailto:armaanchahal1501@gmail.com" class="btn btn-primary">
+                        Send Message
+                    </a>
+                </div>
+                
+                <!-- LinkedIn -->
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <i class="fab fa-linkedin-in contact-icon"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me professionally</p>
+                    <a href="https://www.linkedin.com/in/armaanchahal" target="_blank" class="btn btn-primary">
+                        Visit Profile
+                    </a>
+                </div>
+                
+                <!-- GitHub -->
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <i class="fab fa-github contact-icon"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Check out my projects and code</p>
+                    <a href="https://github.com/ArmaanChahal" target="_blank" class="btn btn-primary">
+                        View Profile
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Designed & Built by Armaan Chahal</p>
+                <div class="social-links">
+                    <a href="https://github.com/ArmaanChahal" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/armaanchahal" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:armaanchahal1501@gmail.com" target="_blank" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
 </body>
 </html>
