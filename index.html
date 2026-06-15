@@ -3,534 +3,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armaan Chahal | Software Engineer</title>
+    <title>Armaan Chahal · Software Engineer</title>
+    <meta name="description" content="Armaan Chahal is a software engineer in Vancouver working where applied AI meets cloud infrastructure.">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Hanken+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-animation">
-        <div class="gradient-orb orb-1"></div>
-        <div class="gradient-orb orb-2"></div>
-        <div class="gradient-orb orb-3"></div>
-        <div class="noise-overlay"></div>
+
+<!-- ===== custom icon sprite (hand-drawn) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="i-code" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 8 4 12 9 16"/><polyline points="15 8 20 12 15 16"/>
+    </g>
+    <g id="i-layers" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3.5 21 8l-9 4.5L3 8l9-4.5Z"/><polyline points="3 12.5 12 17 21 12.5"/>
+    </g>
+    <g id="i-cloud" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7.4 18.5A4.4 4.4 0 0 1 7 9.7 5.6 5.6 0 0 1 17.8 9 4 4 0 0 1 18 18.5Z"/>
+      <circle cx="12.3" cy="13.6" r="1.15" fill="currentColor" stroke="none"/>
+    </g>
+    <g id="i-arrow" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
+    </g>
+    <g id="i-diag" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="7" y1="17" x2="16.5" y2="7.5"/><polyline points="8 7 17 7 17 16"/>
+    </g>
+    <g id="i-up" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="20" x2="12" y2="5"/><polyline points="6 11 12 5 18 11"/>
+    </g>
+    <g id="i-file" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 3.5h6.5L18 8v12.5H7Z"/><polyline points="13.3 3.5 13.3 8 18 8"/>
+      <line x1="9.5" y1="13" x2="15" y2="13"/><line x1="9.5" y1="16" x2="15" y2="16"/>
+    </g>
+    <g id="i-github" stroke="none">
+      <path fill="currentColor" d="M12 2.4a9.6 9.6 0 0 0-3.04 18.7c.48.09.66-.2.66-.46l-.01-1.7c-2.67.58-3.23-1.13-3.23-1.13-.44-1.1-1.07-1.4-1.07-1.4-.87-.6.07-.58.07-.58.96.07 1.47.99 1.47.99.86 1.47 2.25 1.05 2.8.8.09-.62.34-1.05.61-1.29-2.13-.24-4.37-1.06-4.37-4.74 0-1.05.37-1.9.99-2.58-.1-.24-.43-1.22.1-2.54 0 0 .8-.26 2.65 1a9.2 9.2 0 0 1 4.82 0c1.84-1.26 2.65-1 2.65-1 .52 1.32.19 2.3.1 2.54.61.68.98 1.53.98 2.58 0 3.69-2.25 4.5-4.39 4.74.35.3.65.88.65 1.78l-.01 2.64c0 .26.18.56.67.46A9.6 9.6 0 0 0 12 2.4Z"/>
+    </g>
+    <g id="i-linkedin" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="2"/>
+      <circle cx="8" cy="8.4" r="1.05" fill="currentColor" stroke="none"/>
+      <line x1="8" y1="11.2" x2="8" y2="16.6"/>
+      <path d="M11.6 16.6v-3.2a2.1 2.1 0 0 1 4.2 0v3.2M11.6 11.2v5.4"/>
+    </g>
+    <g id="i-mail" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="1.6"/><polyline points="4 7.2 12 12.8 20 7.2"/>
+    </g>
+  </defs>
+</svg>
+
+<div class="ground"></div>
+<div class="grain"></div>
+<div class="progress" id="progress"></div>
+<div class="reticle"></div>
+<div class="reticle-ring"></div>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">AC<span class="dot">.</span></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="menu" id="menu">
+      <a class="link active" href="#home"><span class="no">01</span>Home</a>
+      <a class="link" href="#about"><span class="no">02</span>About</a>
+      <a class="link" href="#experience"><span class="no">03</span>Experience</a>
+      <a class="link" href="projects.html"><span class="no">04</span>Work</a>
+      <a class="link" href="contacts.html"><span class="no">05</span>Contact</a>
+      <a class="resume" href="resume_portfolio.pdf" target="_blank" rel="noopener">Résumé <svg class="ico"><use href="#i-file"/></svg></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero section" id="home">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="hero-coord"><span class="pin"></span> Vancouver, BC <span style="color:var(--hair-2)">/</span> Software Engineer</div>
+      <h1 class="hero-name" id="heroName" aria-label="Armaan Chahal">
+        <span class="row"><span class="ch">A</span><span class="ch">r</span><span class="ch">m</span><span class="ch">a</span><span class="ch">a</span><span class="ch">n</span></span>
+        <span class="row"><span class="ch foil">C</span><span class="ch foil">h</span><span class="ch foil">a</span><span class="ch foil">h</span><span class="ch foil">a</span><span class="ch foil">l</span></span>
+      </h1>
+      <p class="hero-role">I build <span class="swap" id="swap">AI systems</span><span class="caret"></span></p>
+      <p class="hero-blurb">
+        Fourth-year Computer Science student at Simon Fraser University, currently engineering
+        enterprise automation at <b>BCI</b> on the Digital Workplace team. I work where applied AI
+        meets cloud infrastructure, from medical-imaging models to production reporting systems.
+      </p>
+      <div class="hero-actions">
+        <span class="mag"><a class="cta solid" href="projects.html"><span>View selected work</span> <svg class="ico"><use href="#i-arrow"/></svg></a></span>
+        <span class="mag"><a class="cta" href="contacts.html"><span>Get in touch</span></a></span>
+      </div>
     </div>
 
-    <!-- Cursor Glow -->
-    <div class="cursor-glow"></div>
+    <!-- ===== signature: self-plotting schematic ===== -->
+    <div class="hero-visual" data-reveal>
+      <figure class="schematic" id="schematic" aria-label="Schematic of an AI automation pipeline">
+        <span class="corner tl"></span><span class="corner tr"></span>
+        <span class="corner bl"></span><span class="corner br"></span>
+        <svg viewBox="0 0 400 400" role="img">
+          <!-- dimension lines -->
+          <line class="plot thin" x1="40" y1="95" x2="40" y2="330"/>
+          <line class="plot thin" x1="36" y1="95" x2="44" y2="95"/>
+          <line class="plot thin" x1="36" y1="330" x2="44" y2="330"/>
+          <text class="dim-lab" x="30" y="214" text-anchor="middle" transform="rotate(-90 30 214)">≈ 150 USERS</text>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container navbar-container">
-            <a class="navbar-brand" href="#">
-                <span class="brand-text">AC</span>
-            </a>
-            <button class="navbar-toggler" id="navbarToggler" aria-label="Toggle navigation">
-                <span class="toggler-line"></span>
-                <span class="toggler-line"></span>
-                <span class="toggler-line"></span>
-            </button>
-            <ul class="navbar-nav" id="navbarNav">
-                <li class="nav-item"><a class="nav-link active" href="#home"><span class="nav-number">01.</span> Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about"><span class="nav-number">02.</span> About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#experience"><span class="nav-number">03.</span> Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects.html"><span class="nav-number">04.</span> Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html"><span class="nav-number">05.</span> Contact</a></li>
-                <li class="nav-item"><a class="btn btn-glow" href="resume_portfolio.pdf" target="_blank">Resume</a></li>
-            </ul>
+          <line class="plot thin" x1="70" y1="372" x2="320" y2="372"/>
+          <line class="plot thin" x1="70" y1="368" x2="70" y2="376"/>
+          <line class="plot thin" x1="320" y1="368" x2="320" y2="376"/>
+          <text class="dim-lab" x="195" y="388" text-anchor="middle">≈ $48 / MO</text>
+
+          <!-- feedback loop (learns from corrections) -->
+          <path class="plot thin" d="M320 330 V350 H55 V95 H70"/>
+          <text class="dim-lab" x="92" y="345" text-anchor="start">FEEDBACK LOOP</text>
+
+          <!-- main traces (draw in sequence) -->
+          <path class="plot d1" pathLength="1" d="M70 95 H200"/>
+          <path class="plot d2" pathLength="1" d="M200 95 V215"/>
+          <path class="plot d3" pathLength="1" d="M200 215 H320"/>
+          <path class="plot d4" pathLength="1" d="M320 215 V330"/>
+          <path id="mainTrace" d="M70 95 H200 V215 H320 V330" fill="none" stroke="none"/>
+
+          <!-- nodes: circle + crosshair -->
+          <g>
+            <circle class="node-c n1" cx="70" cy="95" r="8"/>
+            <line class="node-x n1" x1="66" y1="95" x2="74" y2="95"/><line class="node-x n1" x1="70" y1="91" x2="70" y2="99"/>
+            <text class="node-lab n1" x="70" y="76" text-anchor="middle">INGEST</text>
+
+            <circle class="node-c n2" cx="200" cy="95" r="8"/>
+            <line class="node-x n2" x1="196" y1="95" x2="204" y2="95"/><line class="node-x n2" x1="200" y1="91" x2="200" y2="99"/>
+            <text class="node-lab n2" x="200" y="76" text-anchor="middle">EMBED</text>
+
+            <circle class="node-c n3" cx="200" cy="215" r="8"/>
+            <line class="node-x n3" x1="196" y1="215" x2="204" y2="215"/><line class="node-x n3" x1="200" y1="211" x2="200" y2="219"/>
+            <text class="node-lab n3" x="200" y="238" text-anchor="middle">CLASSIFY</text>
+
+            <circle class="node-c n4" cx="320" cy="215" r="8"/>
+            <line class="node-x n4" x1="316" y1="215" x2="324" y2="215"/><line class="node-x n4" x1="320" y1="211" x2="320" y2="219"/>
+            <text class="node-lab n4" x="320" y="196" text-anchor="middle">ROUTE</text>
+
+            <circle class="node-c n5" cx="320" cy="330" r="8"/>
+            <line class="node-x n5" x1="316" y1="330" x2="324" y2="330"/><line class="node-x n5" x1="320" y1="326" x2="320" y2="334"/>
+            <text class="node-lab n5" x="320" y="353" text-anchor="middle">DIGEST</text>
+          </g>
+
+          <circle class="pulse" id="pulse" r="3.4" cx="70" cy="95"/>
+        </svg>
+        <figcaption class="stamp">FIG.01 · PIPELINE v1.0</figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<!-- ===== ABOUT ===== -->
+<section class="about section" id="about">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow"><span class="idx">(01)</span> Profile</span>
+      <h2 class="h-sec">Precision over <em>noise.</em></h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-copy" data-reveal>
+        <p>I am a software engineer who likes systems that are quiet, legible, and hard to break.</p>
+        <p>
+          Right now I am a fourth-year Computer Science student at <mark class="hl">Simon Fraser University</mark>,
+          on co-op at <mark class="hl">BCI</mark> on the Digital Workplace team. Most of my work is automation and
+          applied AI across Azure and Microsoft 365: turning manual, error-prone processes into things that
+          run on their own and report back clearly.
+        </p>
+        <p>
+          Before that I built AI-powered medical diagnostic tools and cloud-native applications on AWS and Azure.
+          I hold the <b>AWS Cloud Practitioner</b> and <b>AWS AI Practitioner</b> certifications, with Azure next on the bench.
+        </p>
+        <p>
+          Away from the editor you will usually find me on a tennis court, at a table-tennis table, or reading
+          far too much about over-engineered German sedans.
+        </p>
+      </div>
+
+      <div class="portrait" data-reveal>
+        <div class="plate" data-clip>
+          <span class="tick a"></span><span class="tick b"></span>
+          <img src="images/self.jpg" alt="Portrait of Armaan Chahal" loading="lazy" decoding="async">
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero section" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-tag animate-in" style="--delay: 0.1s">
-                    <span class="tag-line"></span>
-                    <span class="tag-text">Welcome to my portfolio</span>
-                </div>
-                <h1 class="hero-title animate-in" style="--delay: 0.2s">
-                    <span class="title-line">Hi, I'm</span>
-                    <span class="title-name gradient-text">Armaan Chahal</span>
-                </h1>
-                <h2 class="hero-subtitle animate-in" style="--delay: 0.3s">
-                    I engineer <span class="typed-text"></span><span class="cursor">|</span>
-                </h2>
-                <p class="hero-description animate-in" style="--delay: 0.4s">
-                    A fourth-year Computer Science student at Simon Fraser University, currently building 
-                    enterprise solutions at <span class="highlight">BCI</span>. I specialize in crafting 
-                    scalable applications, from AI-powered medical diagnostics to cloud infrastructure.
-                </p>
-                <div class="hero-cta animate-in" style="--delay: 0.5s">
-                    <a href="projects.html" class="btn btn-primary">
-                        <span>View My Work</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#about" class="btn btn-ghost">
-                        <span>Learn More</span>
-                    </a>
-                </div>
-            </div>
-            <div class="hero-visual animate-in" style="--delay: 0.6s">
-                <div class="code-window">
-                    <div class="window-header">
-                        <span class="window-dot red"></span>
-                        <span class="window-dot yellow"></span>
-                        <span class="window-dot green"></span>
-                        <span class="window-title">armaan.config.ts</span>
-                    </div>
-                    <div class="window-content">
-                        <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
-  <span class="code-prop">name</span>: <span class="code-string">"Armaan Chahal"</span>,
-  <span class="code-prop">role</span>: <span class="code-string">"AI, Cloud, and DevOps Engineer"</span>,
-  <span class="code-prop">location</span>: <span class="code-string">"Vancouver, BC"</span>,
-  <span class="code-prop">skills</span>: [<span class="code-string">"Python"</span>, <span class="code-string">"Java"</span>, <span class="code-string">"React"</span>],
-  <span class="code-prop">passion</span>: <span class="code-string">"Building the future"</span>,
-};</code></pre>
-                    </div>
-                </div>
-            </div>
+        <div class="cap"><span>ARMAAN CHAHAL</span><span>VANCOUVER / 2026</span></div>
+        <div class="badge">
+          <div class="num" data-count="2" data-suffix="+">0</div>
+          <div class="lab">Years building</div>
         </div>
-        <div class="scroll-indicator animate-in" style="--delay: 0.8s">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll to explore</span>
+      </div>
+    </div>
+
+    <!-- skills as a technical spec sheet -->
+    <div class="spec" data-reveal>
+      <div class="spec-row">
+        <div class="key"><svg class="ico"><use href="#i-code"/></svg> Languages</div>
+        <div class="val"><span>Python</span><span>Java</span><span>JavaScript</span><span>C / C++</span><span>SQL</span><span>Haskell</span></div>
+      </div>
+      <div class="spec-row">
+        <div class="key"><svg class="ico"><use href="#i-layers"/></svg> Frameworks</div>
+        <div class="val"><span>React</span><span>Node.js</span><span>Flask</span><span>SvelteKit</span><span>PyTorch</span><span>TensorFlow</span></div>
+      </div>
+      <div class="spec-row">
+        <div class="key"><svg class="ico"><use href="#i-cloud"/></svg> Cloud &amp; Tools</div>
+        <div class="val"><span>AWS</span><span>Azure</span><span>Docker</span><span>Git</span><span>Directus</span><span>MATLAB</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== kinetic band ===== -->
+<div class="ticker" aria-hidden="true">
+  <div class="track">
+    <span class="it">Applied AI <span class="star">✦</span></span><span class="it">Cloud Infrastructure <span class="star">✦</span></span><span class="it">Automation <span class="star">✦</span></span><span class="it">DevOps <span class="star">✦</span></span><span class="it">Machine Learning <span class="star">✦</span></span><span class="it">Data Pipelines <span class="star">✦</span></span>
+    <span class="it">Applied AI <span class="star">✦</span></span><span class="it">Cloud Infrastructure <span class="star">✦</span></span><span class="it">Automation <span class="star">✦</span></span><span class="it">DevOps <span class="star">✦</span></span><span class="it">Machine Learning <span class="star">✦</span></span><span class="it">Data Pipelines <span class="star">✦</span></span>
+  </div>
+</div>
+
+<!-- ===== EXPERIENCE ===== -->
+<section class="experience section" id="experience">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow"><span class="idx">(02)</span> Track record</span>
+      <h2 class="h-sec">Where I've <em>worked.</em></h2>
+      <p class="lede">Roles across enterprise IT, research, and web development, all pointed at building reliable systems and helping teams move faster.</p>
+    </div>
+
+    <div class="timeline" id="timeline">
+      <span class="spine"></span>
+
+      <article class="entry" data-reveal>
+        <div class="top">
+          <div>
+            <h3 class="role">AI Automation Engineer</h3>
+            <p class="co">BCI, Victoria BC <span style="color:var(--graphite)">/ Co-op</span></p>
+          </div>
+          <span class="when">JAN 2026 <span class="arr">→</span> PRESENT</span>
         </div>
-    </section>
+        <ul class="bullets">
+          <li>Build and improve enterprise automation across Azure and Microsoft 365 for internal teams.</li>
+          <li>Prototype, validate, and document automation so it can be handed off and trusted in production.</li>
+          <li>Translate stakeholder requests into clear, tracked engineering work.</li>
+        </ul>
+        <ul class="tags"><li>Azure</li><li>M365</li><li>Automation</li><li>Applied AI</li></ul>
+      </article>
 
-    <!-- About Section -->
-    <section class="about section" id="about">
-        <div class="container">
-            <div class="section-header animate-in">
-                <span class="section-tag">About Me</span>
-                <h2 class="section-title">Crafting Digital Experiences</h2>
-                <div class="title-decoration"></div>
-            </div>
-            
-            <div class="about-grid">
-                <div class="about-content">
-                    <div class="about-text animate-in">
-                        <p>
-                            Hello! I'm Armaan, a fourth-year Computer Science student at 
-                            <span class="highlight">Simon Fraser University</span> with a deep passion 
-                            for building software that makes a difference. Currently, I'm working at 
-                            <span class="highlight">BCI (British Columbia Investment Management Corporation)</span> 
-                            on the Digital Workplace team, where I lead enterprise software initiatives.
-                        </p>
-                        <p>
-                            My journey in tech spans from developing AI-powered medical diagnostic tools 
-                            to architecting cloud-native applications on AWS and Azure. I thrive on 
-                            turning complex problems into elegant, user-centered solutions.
-                        </p>
-                        <p>
-                            Beyond coding, I'm pursuing AWS and cloud certifications while exploring 
-                            the intersections of technology and finance. Here are the technologies 
-                            I've been working with:
-                        </p>
-                    </div>
-                    
-                    <div class="skills-container animate-in">
-                        <div class="skill-category">
-                            <h4><i class="fas fa-code"></i> Languages</h4>
-                            <ul class="skills-list">
-                                <li>Python</li>
-                                <li>Java</li>
-                                <li>JavaScript (ES6+)</li>
-                                <li>C/C++</li>
-                                <li>SQL</li>
-                                <li>Haskell</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4><i class="fas fa-layer-group"></i> Frameworks</h4>
-                            <ul class="skills-list">
-                                <li>React</li>
-                                <li>Node.js</li>
-                                <li>Flask</li>
-                                <li>SvelteKit</li>
-                                <li>PyTorch</li>
-                                <li>TensorFlow</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4><i class="fas fa-cloud"></i> Cloud & Tools</h4>
-                            <ul class="skills-list">
-                                <li>AWS (EC2, S3, SageMaker)</li>
-                                <li>Azure</li>
-                                <li>Docker</li>
-                                <li>Git</li>
-                                <li>Directus</li>
-                                <li>MATLAB</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-visual animate-in">
-                    <div class="image-frame">
-                        <div class="frame-border"></div>
-                        <div class="frame-glow"></div>
-                        <img src="images/self.jpg" alt="Armaan Chahal" class="profile-img">
-                    </div>
-                    <div class="experience-badge">
-                        <span class="badge-number">2+</span>
-                        <span class="badge-text">Years of<br>Experience</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certifications -->
-            <div class="certifications animate-in">
-                <h3 class="cert-title">
-                    <i class="fas fa-certificate"></i>
-                    Certifications & Achievements
-                </h3>
-                <div class="cert-grid">
-                    <div class="cert-card">
-                        <div class="cert-icon">
-                            <img src="images/aws.jpg" alt="AWS">
-                        </div>
-                        <div class="cert-info">
-                            <h4>AWS Cloud Practitioner</h4>
-                            <p>Demonstrated proficiency in AWS core services including EC2, S3, IAM, VPC, and Lambda with knowledge of secure, scalable cloud architecture design.</p>
-                        </div>
-                        <div class="cert-badge">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-icon">
-                            <img src="images/aws.jpg" alt="AWS AI">
-                        </div>
-                        <div class="cert-info">
-                            <h4>AWS AI Practitioner</h4>
-                            <p>Expertise in AWS ML/AI services including SageMaker, Rekognition, and Comprehend. Hands-on experience building and deploying ML models.</p>
-                        </div>
-                        <div class="cert-badge">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-icon">
-                            <img src="images/certificate-1.jpg" alt="C/C++">
-                        </div>
-                        <div class="cert-info">
-                            <h4>C/C++ Certification</h4>
-                            <p>Completed intensive 2-month in-person training program, achieving excellent marks on the certification examination.</p>
-                        </div>
-                        <div class="cert-badge">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-icon">
-                            <img src="images/certificate-2.jpg" alt="Python">
-                        </div>
-                        <div class="cert-info">
-                            <h4>Python Certification</h4>
-                            <p>Comprehensive 2-month course covering advanced Python concepts including computer vision, video processing, and data visualization.</p>
-                        </div>
-                        <div class="cert-badge">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-icon">
-                            <img src="images/AI_certificate.jpg" alt="AI/ML">
-                        </div>
-                        <div class="cert-info">
-                            <h4>AI & Machine Learning</h4>
-                            <p>Six-week intensive covering supervised/unsupervised learning, neural networks, deep learning architectures, and model optimization.</p>
-                        </div>
-                        <div class="cert-badge">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <article class="entry" data-reveal>
+        <div class="top">
+          <div>
+            <h3 class="role">AI Research Analyst</h3>
+            <p class="co">Wilfrid Laurier University, Waterloo ON</p>
+          </div>
+          <span class="when">SEP 2025 <span class="arr">→</span> DEC 2025</span>
         </div>
-    </section>
+        <ul class="bullets">
+          <li>Studied privacy-preserving federated learning (FedAvg, ADMM) for multi-agent cooperative localization.</li>
+          <li>Reviewed literature on federated learning across transportation, digital twins, and continual learning.</li>
+        </ul>
+        <ul class="tags"><li>Research</li><li>FedAvg</li><li>ADMM</li></ul>
+      </article>
 
-
-
-    <!-- Experience Section -->
-    <section class="experience section" id="experience">
-        <div class="container">
-            <div class="section-header animate-in">
-                <span class="section-tag">Experience</span>
-                <h2 class="section-title">Past Experience</h2>
-                <div class="title-decoration"></div>
-            </div>
-            <p class="section-intro animate-in">
-                Roles I've held across enterprise IT, web development, and teaching — focused on building reliable systems and helping teams move faster.
-            </p>
-
-            <div class="experience-grid">
-                <article class="experience-card animate-in" style="--delay: 0.1s">
-                    <div class="experience-top">
-                        <div>
-                            <h3 class="experience-role">AI Automation Engineer (Co-op)</h3>
-                            <p class="experience-company">BCI • Victoria, BC</p>
-                        </div>
-                        <span class="experience-date">Jan 2026 – Present</span>
-                    </div>
-                    <ul class="experience-bullets">
-                        <li>Support and improve enterprise workflows across Azure / Microsoft 365 for internal users.</li>
-                        <li>Prototype and validate automation ideas; document outcomes and operational steps for handoff.</li>
-                        <li>Partner with stakeholders to translate requests into clear tasks and track progress.</li>
-                    </ul>
-                    <ul class="project-tech">
-                        <li>Azure</li>
-                        <li>M365</li>
-                        <li>Automation</li>
-                        <li>IT Ops</li>
-                    </ul>
-                </article>
-
-                <article class="experience-card animate-in" style="--delay: 0.3s">
-                    <div class="experience-top">
-                        <div>
-                            <h3 class="experience-role">AI Research Analyst</h3>
-                            <p class="experience-company">Wilfrid Laurier University • Waterloo, ON</p>
-                        </div>
-                        <span class="experience-date">Sept 2025 – Dec 2025</span>
-                    </div>
-                    <ul class="experience-bullets">
-                        <li>Researching privacy-preserving federated learning (FedAvg, ADMM) for multi-agent cooperative localization.</li>
-                        <li>Reviewing literature on FL applications in transportation, digital twins, and continual learning.</li>
-                    </ul>
-                    <ul class="project-tech">
-                        <li>Research</li>
-                        <li>Documentation</li>
-                        <li>FedAvg</li>
-                    </ul>
-                </article>
-
-                <article class="experience-card animate-in" style="--delay: 0.2s">
-                    <div class="experience-top">
-                        <div>
-                            <h3 class="experience-role">Back-end Web Developer</h3>
-                            <p class="experience-company">CJSF 101.9 FM (SFU) • Vancouver, BC</p>
-                        </div>
-                        <span class="experience-date">Sep 2024 – Dec 2024</span>
-                    </div>
-                    <ul class="experience-bullets">
-                        <li>Build and maintain backend features using Directus, enabling a cleaner content workflow.</li>
-                        <li>Ship UI and API updates in SvelteKit, improving reliability and editor experience.</li>
-                        <li>Collaborate with a small team to plan features, review code, and deploy changes.</li>
-                    </ul>
-                    <ul class="project-tech">
-                        <li>Directus</li>
-                        <li>SvelteKit</li>
-                        <li>JavaScript</li>
-                        <li>REST</li>
-                    </ul>
-                </article>
-
-            </div>
-
-            <div class="experience-cta animate-in">
-                <a href="resume_portfolio.pdf" target="_blank" class="btn btn-primary btn-lg">
-                    <span>View Full Resume</span>
-                    <i class="fas fa-file-pdf"></i>
-                </a>
-            </div>
+      <article class="entry" data-reveal>
+        <div class="top">
+          <div>
+            <h3 class="role">Back-end Web Developer</h3>
+            <p class="co">CJSF 101.9 FM, SFU, Vancouver BC</p>
+          </div>
+          <span class="when">SEP 2024 <span class="arr">→</span> DEC 2024</span>
         </div>
-    </section>
-    <!-- Featured Projects Section -->
-    <section class="projects section" id="projects">
-        <div class="container">
-            <div class="section-header animate-in">
-                <span class="section-tag">My Work</span>
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="title-decoration"></div>
-            </div>
-            <p class="section-intro animate-in">
-                A selection of projects I've built. Want to see the complete collection?
-                <a href="projects.html" class="inline-link">View all projects <i class="fas fa-arrow-right"></i></a>
-            </p>
-            
-            <div class="projects-grid">
-                <!-- Project 1 - NeuroVision AI -->
-                <article class="project-card featured animate-in">
-                    <div class="project-image">
-                        <img src="images/MRI.png" alt="NeuroVision AI">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://armaanchahal.github.io/MRI-scan/" target="_blank" class="overlay-btn">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="https://github.com/ArmaanChahal/MRI-scan" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Featured Project</span>
-                        <h3 class="project-title">NeuroVision AI</h3>
-                        <div class="project-description">
-                            <p>Deep learning-powered brain tumor classification system that analyzes MRI scans to identify cancer types. Built with a custom CNN architecture trained on AWS EC2 GPU instances, achieving high accuracy in multi-class classification.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>AWS</li>
-                            <li>Flask</li>
-                            <li>PyTorch</li>
-                            <li>HTML/CSS</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://armaanchahal.github.io/MRI-scan/" target="_blank" class="btn btn-sm">
-                                Live Demo <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/ArmaanChahal/MRI-scan" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+        <ul class="bullets">
+          <li>Built and maintained backend features in Directus for a cleaner content workflow.</li>
+          <li>Shipped UI and API updates in SvelteKit, improving reliability and the editor experience.</li>
+          <li>Planned features, reviewed code, and deployed changes with a small team.</li>
+        </ul>
+        <ul class="tags"><li>Directus</li><li>SvelteKit</li><li>JavaScript</li><li>REST</li></ul>
+      </article>
+    </div>
 
-                <!-- Project 2 - DermaScan AI -->
-                <article class="project-card featured animate-in">
-                    <div class="project-image">
-                        <img src="images/Skin-lesion.png" alt="DermaScan AI">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://armaanchahal.github.io/Skin-Lesion-AI/" target="_blank" class="overlay-btn">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="https://github.com/ArmaanChahal/Skin-Lesion-AI" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Featured Project</span>
-                        <h3 class="project-title">DermaScan AI</h3>
-                        <div class="project-description">
-                            <p>Intelligent dermatological analysis platform implementing the ABCD rule for skin lesion assessment. Utilizes TensorFlow-based image classification trained on EC2 GPU instances for accurate disease detection and risk evaluation.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>AWS</li>
-                            <li>Python</li>
-                            <li>TensorFlow</li>
-                            <li>HTML/CSS</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://armaanchahal.github.io/Skin-Lesion-AI/" target="_blank" class="btn btn-sm">
-                                Live Demo <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/ArmaanChahal/Skin-Lesion-AI" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+    <div style="margin-top:24px" data-reveal>
+      <span class="mag"><a class="cta" href="resume_portfolio.pdf" target="_blank" rel="noopener"><span>Read the full résumé</span> <svg class="ico"><use href="#i-file"/></svg></a></span>
+    </div>
+  </div>
+</section>
 
-                <!-- Project 3 - Weather Website -->
-                <article class="project-card featured animate-in">
-                    <div class="project-image">
-                        <img src="images/weather-website.png" alt="Weather Website">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://armaanchahal.github.io/Weather-website/" target="_blank" class="overlay-btn">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="https://github.com/ArmaanChahal/Weather-website" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Featured Project</span>
-                        <h3 class="project-title">Weather Dashboard</h3>
-                        <div class="project-description">
-                            <p>Dynamic weather application featuring real-time meteorological data integration. Displays temperature, forecasts, and wind conditions with adaptive UI that transforms based on current weather conditions for an immersive experience.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Weather API</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://armaanchahal.github.io/Weather-website/" target="_blank" class="btn btn-sm">
-                                Live Demo <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/ArmaanChahal/Weather-website" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
+<!-- ===== SELECTED WORK ===== -->
+<section class="work-sec section" id="work">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow"><span class="idx">(03)</span> Selected work</span>
+      <h2 class="h-sec">A few things I've <em>built.</em></h2>
+    </div>
 
-            <div class="projects-cta animate-in">
-                <a href="projects.html" class="btn btn-primary btn-lg">
-                    <span>View All Projects</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
+    <div class="work">
+      <article class="work-row" data-reveal>
+        <a class="wk-media" href="https://armaanchahal.github.io/MRI-scan/" target="_blank" rel="noopener" data-clip>
+          <img src="images/MRI.png" alt="NeuroVision AI interface" loading="lazy" decoding="async">
+          <span class="open"><svg class="ico"><use href="#i-diag"/></svg></span>
+        </a>
+        <div class="wk-body">
+          <div><span class="wk-index">01</span><span class="wk-label">AI / Healthcare</span></div>
+          <h3 class="wk-title">NeuroVision AI</h3>
+          <p class="wk-desc">A deep-learning system that reads MRI scans and classifies brain-tumor types. Custom CNN trained on AWS EC2 GPU instances, served through a Flask app.</p>
+          <ul class="tags"><li>AWS</li><li>Flask</li><li>PyTorch</li></ul>
+          <div class="wk-links">
+            <span class="mag"><a class="cta" href="https://armaanchahal.github.io/MRI-scan/" target="_blank" rel="noopener"><span>Live demo</span> <svg class="ico"><use href="#i-diag"/></svg></a></span>
+            <span class="mag"><a class="cta" href="https://github.com/ArmaanChahal/MRI-scan" target="_blank" rel="noopener"><span>Source</span> <svg class="ico"><use href="#i-github"/></svg></a></span>
+          </div>
         </div>
-    </section>
+      </article>
 
-    <!-- Contact CTA Section -->
-    <section class="contact-cta section">
-        <div class="container">
-            <div class="cta-content animate-in">
-                <span class="section-tag">What's Next?</span>
-                <h2 class="cta-title">Let's Build Something Together</h2>
-                <p class="cta-text">
-                    I'm always open to discussing new projects, creative ideas, or opportunities 
-                    to be part of your vision. Whether you have a question or just want to say hi, 
-                    my inbox is always open!
-                </p>
-                <a href="contacts.html" class="btn btn-primary btn-lg">
-                    <span>Get In Touch</span>
-                    <i class="fas fa-paper-plane"></i>
-                </a>
-            </div>
+      <article class="work-row" data-reveal>
+        <a class="wk-media" href="https://armaanchahal.github.io/Skin-Lesion-AI/" target="_blank" rel="noopener" data-clip>
+          <img src="images/Skin-lesion.png" alt="DermaScan AI interface" loading="lazy" decoding="async">
+          <span class="open"><svg class="ico"><use href="#i-diag"/></svg></span>
+        </a>
+        <div class="wk-body">
+          <div><span class="wk-index">02</span><span class="wk-label">AI / Healthcare</span></div>
+          <h3 class="wk-title">DermaScan AI</h3>
+          <p class="wk-desc">Dermatological analysis that applies the ABCD rule to skin-lesion images. A TensorFlow classifier trained on GPU instances handles disease detection and risk scoring.</p>
+          <ul class="tags"><li>AWS</li><li>Python</li><li>TensorFlow</li></ul>
+          <div class="wk-links">
+            <span class="mag"><a class="cta" href="https://armaanchahal.github.io/Skin-Lesion-AI/" target="_blank" rel="noopener"><span>Live demo</span> <svg class="ico"><use href="#i-diag"/></svg></a></span>
+            <span class="mag"><a class="cta" href="https://github.com/ArmaanChahal/Skin-Lesion-AI" target="_blank" rel="noopener"><span>Source</span> <svg class="ico"><use href="#i-github"/></svg></a></span>
+          </div>
         </div>
-    </section>
+      </article>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="brand-text">AC</span>
-                </div>
-                <div class="footer-links">
-                    <div class="social-links">
-                        <a href="https://github.com/ArmaanChahal" target="_blank" aria-label="GitHub" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/armaanchahal" target="_blank" aria-label="LinkedIn" class="social-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="mailto:armaanchahal1501@gmail.com" aria-label="Email" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>Designed & Built by <span class="gradient-text">Armaan Chahal</span></p>
-            </div>
+      <article class="work-row" data-reveal>
+        <a class="wk-media" href="https://armaanchahal.github.io/Weather-website/" target="_blank" rel="noopener" data-clip>
+          <img src="images/weather-website.png" alt="Weather Dashboard interface" loading="lazy" decoding="async">
+          <span class="open"><svg class="ico"><use href="#i-diag"/></svg></span>
+        </a>
+        <div class="wk-body">
+          <div><span class="wk-index">03</span><span class="wk-label">Web</span></div>
+          <h3 class="wk-title">Weather Dashboard</h3>
+          <p class="wk-desc">A live weather app that pulls real meteorological data and reshapes its interface around the current conditions for a more immersive read.</p>
+          <ul class="tags"><li>JavaScript</li><li>CSS</li><li>Weather API</li></ul>
+          <div class="wk-links">
+            <span class="mag"><a class="cta" href="https://armaanchahal.github.io/Weather-website/" target="_blank" rel="noopener"><span>Live demo</span> <svg class="ico"><use href="#i-diag"/></svg></a></span>
+            <span class="mag"><a class="cta" href="https://github.com/ArmaanChahal/Weather-website" target="_blank" rel="noopener"><span>Source</span> <svg class="ico"><use href="#i-github"/></svg></a></span>
+          </div>
         </div>
-    </footer>
+      </article>
+    </div>
 
-    <!-- Back to Top Button -->
-    <button id="backToTopBtn" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <div style="margin-top:42px" data-reveal>
+      <span class="mag"><a class="cta solid" href="projects.html"><span>View the full index</span> <svg class="ico"><use href="#i-arrow"/></svg></a></span>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- ===== CONTACT CTA ===== -->
+<section class="contact-cta section">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow"><span class="idx">(04)</span> What's next</span>
+      <h2 class="contact-title">Let's build something <em>worth&nbsp;keeping.</em></h2>
+      <p class="contact-sub">I am open to software engineering roles and collaborations. If you have a problem that needs careful engineering, my inbox is open.</p>
+      <div class="hero-actions">
+        <span class="mag"><a class="cta solid" href="contacts.html"><span>Start a conversation</span> <svg class="ico"><use href="#i-arrow"/></svg></a></span>
+        <span class="mag"><a class="cta" href="mailto:armaanchahal1501@gmail.com"><span>armaanchahal1501@gmail.com</span></a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="index.html">AC<span class="dot">.</span></a>
+      <div class="social">
+        <a href="https://github.com/ArmaanChahal" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ico"><use href="#i-github"/></svg></a>
+        <a href="https://www.linkedin.com/in/armaanchahal" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico"><use href="#i-linkedin"/></svg></a>
+        <a href="mailto:armaanchahal1501@gmail.com" aria-label="Email"><svg class="ico"><use href="#i-mail"/></svg></a>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 Armaan Chahal</span>
+      <span class="colophon">Set in Fraunces, Hanken Grotesk &amp; JetBrains Mono</span>
+      <span>Designed &amp; built by <b>Armaan Chahal</b></span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><svg class="ico"><use href="#i-up"/></svg></button>
+
+<script src="script.js"></script>
 </body>
 </html>

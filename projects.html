@@ -3,538 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Armaan Chahal</title>
+    <title>Selected Work · Armaan Chahal</title>
+    <meta name="description" content="A working index of projects by Armaan Chahal, from medical-imaging AI to small systems and algorithms.">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Hanken+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-animation">
-        <div class="gradient-orb orb-1"></div>
-        <div class="gradient-orb orb-2"></div>
-        <div class="gradient-orb orb-3"></div>
-        <div class="noise-overlay"></div>
+
+<!-- ===== custom icon sprite (hand-drawn) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="i-code" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 8 4 12 9 16"/><polyline points="15 8 20 12 15 16"/>
+    </g>
+    <g id="i-layers" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3.5 21 8l-9 4.5L3 8l9-4.5Z"/><polyline points="3 12.5 12 17 21 12.5"/>
+    </g>
+    <g id="i-cloud" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7.4 18.5A4.4 4.4 0 0 1 7 9.7 5.6 5.6 0 0 1 17.8 9 4 4 0 0 1 18 18.5Z"/>
+      <circle cx="12.3" cy="13.6" r="1.15" fill="currentColor" stroke="none"/>
+    </g>
+    <g id="i-arrow" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
+    </g>
+    <g id="i-diag" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="7" y1="17" x2="16.5" y2="7.5"/><polyline points="8 7 17 7 17 16"/>
+    </g>
+    <g id="i-up" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="20" x2="12" y2="5"/><polyline points="6 11 12 5 18 11"/>
+    </g>
+    <g id="i-file" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 3.5h6.5L18 8v12.5H7Z"/><polyline points="13.3 3.5 13.3 8 18 8"/>
+      <line x1="9.5" y1="13" x2="15" y2="13"/><line x1="9.5" y1="16" x2="15" y2="16"/>
+    </g>
+    <g id="i-github" stroke="none">
+      <path fill="currentColor" d="M12 2.4a9.6 9.6 0 0 0-3.04 18.7c.48.09.66-.2.66-.46l-.01-1.7c-2.67.58-3.23-1.13-3.23-1.13-.44-1.1-1.07-1.4-1.07-1.4-.87-.6.07-.58.07-.58.96.07 1.47.99 1.47.99.86 1.47 2.25 1.05 2.8.8.09-.62.34-1.05.61-1.29-2.13-.24-4.37-1.06-4.37-4.74 0-1.05.37-1.9.99-2.58-.1-.24-.43-1.22.1-2.54 0 0 .8-.26 2.65 1a9.2 9.2 0 0 1 4.82 0c1.84-1.26 2.65-1 2.65-1 .52 1.32.19 2.3.1 2.54.61.68.98 1.53.98 2.58 0 3.69-2.25 4.5-4.39 4.74.35.3.65.88.65 1.78l-.01 2.64c0 .26.18.56.67.46A9.6 9.6 0 0 0 12 2.4Z"/>
+    </g>
+    <g id="i-linkedin" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="2"/>
+      <circle cx="8" cy="8.4" r="1.05" fill="currentColor" stroke="none"/>
+      <line x1="8" y1="11.2" x2="8" y2="16.6"/>
+      <path d="M11.6 16.6v-3.2a2.1 2.1 0 0 1 4.2 0v3.2M11.6 11.2v5.4"/>
+    </g>
+    <g id="i-mail" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="1.6"/><polyline points="4 7.2 12 12.8 20 7.2"/>
+    </g>
+  </defs>
+</svg>
+
+<div class="ground"></div>
+<div class="grain"></div>
+<div class="progress" id="progress"></div>
+<div class="reticle"></div>
+<div class="reticle-ring"></div>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">AC<span class="dot">.</span></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="menu" id="menu">
+      <a class="link" href="index.html"><span class="no">01</span>Home</a>
+      <a class="link" href="index.html#about"><span class="no">02</span>About</a>
+      <a class="link" href="index.html#experience"><span class="no">03</span>Experience</a>
+      <a class="link active" href="projects.html"><span class="no">04</span>Work</a>
+      <a class="link" href="contacts.html"><span class="no">05</span>Contact</a>
+      <a class="resume" href="resume_portfolio.pdf" target="_blank" rel="noopener">Résumé <svg class="ico"><use href="#i-file"/></svg></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== PAGE HEAD ===== -->
+<header class="page-head section">
+  <div class="wrap">
+    <div data-reveal>
+      <span class="eyebrow"><span class="idx">(Index)</span> Twelve projects, four disciplines</span>
+      <h1 class="page-title">Selected <em>work.</em></h1>
+    </div>
+    <p class="lede" data-reveal style="margin-top:26px;max-width:58ch">A working catalogue rather than a gallery. Hover any line to preview it, then follow the marks to the live build or the source. The list runs from applied AI through to the smaller systems and algorithms I sharpen my teeth on.</p>
+  </div>
+</header>
+
+<!-- ===== CATALOG ===== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="catalog">
+
+      <!-- group A -->
+      <div class="cat-group" data-reveal>
+        <div class="cat-head"><span>AI &amp; Machine Learning</span><span class="ln"></span><span class="ct">03</span></div>
+
+        <div class="item" data-img="images/MRI.png">
+          <span class="no">01</span>
+          <a class="name" href="https://armaanchahal.github.io/MRI-scan/" target="_blank" rel="noopener">NeuroVision AI</a>
+          <span class="meta">
+            <span class="stack">AWS · FLASK · PYTORCH</span>
+            <span class="go">
+              <a href="https://armaanchahal.github.io/MRI-scan/" target="_blank" rel="noopener" aria-label="Live demo"><svg class="ico"><use href="#i-diag"/></svg></a>
+              <a href="https://github.com/ArmaanChahal/MRI-scan" target="_blank" rel="noopener" aria-label="Source"><svg class="ico"><use href="#i-github"/></svg></a>
+            </span>
+          </span>
+          <span class="thumb"><img src="images/MRI.png" alt="NeuroVision AI preview" loading="lazy" decoding="async"></span>
+        </div>
+
+        <div class="item" data-img="images/Skin-lesion.png">
+          <span class="no">02</span>
+          <a class="name" href="https://armaanchahal.github.io/Skin-Lesion-AI/" target="_blank" rel="noopener">DermaScan AI</a>
+          <span class="meta">
+            <span class="stack">AWS · PYTHON · TENSORFLOW</span>
+            <span class="go">
+              <a href="https://armaanchahal.github.io/Skin-Lesion-AI/" target="_blank" rel="noopener" aria-label="Live demo"><svg class="ico"><use href="#i-diag"/></svg></a>
+              <a href="https://github.com/ArmaanChahal/Skin-Lesion-AI" target="_blank" rel="noopener" aria-label="Source"><svg class="ico"><use href="#i-github"/></svg></a>
+            </span>
+          </span>
+          <span class="thumb"><img src="images/Skin-lesion.png" alt="DermaScan AI preview" loading="lazy" decoding="async"></span>
+        </div>
+
+        <div class="item" data-img="images/vacuum.png">
+          <span class="no">03</span>
+          <a class="name" href="https://github.com/ArmaanChahal/Vacuum-Cleaner" target="_blank" rel="noopener">Vacuum Cleaner Simulation</a>
+          <span class="meta">
+            <span class="stack">PYTHON · PATHFINDING</span>
+            <span class="go">
+              <a href="https://github.com/ArmaanChahal/Vacuum-Cleaner" target="_blank" rel="noopener" aria-label="Source"><svg class="ico"><use href="#i-github"/></svg></a>
+            </span>
+          </span>
+          <span class="thumb"><img src="images/vacuum.png" alt="Vacuum Cleaner Simulation preview" loading="lazy" decoding="async"></span>
+        </div>
+      </div>
+
+      <!-- group B -->
+      <div class="cat-group" data-reveal>
+        <div class="cat-head"><span>Web</span><span class="ln"></span><span class="ct">03</span></div>
+
+        <div class="item" data-img="images/weather-website.png">
+          <span class="no">04</span>
+          <a class="name" href="https://armaanchahal.github.io/Weather-website/" target="_blank" rel="noopener">Weather Dashboard</a>
+          <span class="meta">
+            <span class="stack">JAVASCRIPT · WEATHER API</span>
+            <span class="go">
+              <a href="https://armaanchahal.github.io/Weather-website/" target="_blank" rel="noopener" aria-label="Live demo"><svg class="ico"><use href="#i-diag"/></svg></a>
+              <a href="https://github.com/ArmaanChahal/Weather-website" target="_blank" rel="noopener" aria-label="Source"><svg class="ico"><use href="#i-github"/></svg></a>
+            </span>
+          </span>
+          <span class="thumb"><img src="images/weather-website.png" alt="Weather Dashboard preview" loading="lazy" decoding="async"></span>
+        </div>
+
+        <div class="item" data-img="images/calculator.png">
+          <span class="no">05</span>
+          <a class="name" href="https://armaanchahal.github.io/Calculator/" target="_blank" rel="noopener">Calculator</a>
+          <span class="meta">
+            <span class="stack">HTML · CSS · JS</span>
+            <span class="go">
+              <a href="https://armaanchahal.github.io/Calculator/" target="_blank" rel="noopener" aria-label="Live demo"><svg class="ico"><use href="#i-diag"/></svg></a>
+              <a href="https://github.com/ArmaanChahal/Calculator" target="_blank" rel="noopener" aria-label="Source"><svg class="ico"><use href="#i-github"/></svg></a>
+            </span>
+          </span>
+          <span class="thumb"><img src="images/calculator.png" alt="Calculator preview" loading="lazy" decoding="async"></span>
+        </div>
+
+        <div class="item" data-img="images/temp-convertor.png">
+          <span class="no">06</span>
+          <a class="name" href="https://armaanchahal.github.io/temp-converter/" target="_blank" rel="noopener">Temperature Converter</a>
+          <span class="meta">
+            <span class="stack">HTML · CSS · JS</span>
+            <span class="go">
+              <a href="https://armaanchahal.github.io/temp-converter/" target="_blank" rel="noopener" aria-label="Live demo"><svg class="ico"><use href="#i-diag"/></svg></a>
+              <a href="https://github.com/ArmaanChahal/temp-converter" target="_blank" rel="noopener" aria-label="Source"><svg class="ico"><use href="#i-github"/></svg></a>
+            </span>
+          </span>
+          <span class="thumb"><img src="images/temp-convertor.png" alt="Temperature Converter preview" loading="lazy" decoding="async"></span>
+        </div>
+      </div>
+
+      <!-- group C -->
+      <div class="cat-group" data-reveal>
+        <div class="cat-head"><span>Systems &amp; Games</span><span class="ln"></span><span class="ct">04</span></div>
+
+        <div class="item" data-img="images/quiz.png">
+          <span class="no">07</span>
+          <a class="name" href="https://github.com/ArmaanChahal/Quiz" target="_blank" rel="noopener">Quiz Portal</a>
+          <span class="meta">
+            <span class="stack">JAVA · SWING · CSV</span>
+            <span class="go">
+              <a href="https://github.com/ArmaanChahal/Quiz" target="_blank" rel="noopener" aria-label="Source"><svg class="ico"><use href="#i-github"/></svg></a>
+            </span>
+          </span>
+          <span class="thumb"><img src="images/quiz.png" alt="Quiz Portal preview" loading="lazy" decoding="async"></span>
+        </div>
+
+        <div class="item" data-img="images/login.jpg">
+          <span class="no">08</span>
+          <a class="name" href="https://github.com/ArmaanChahal" target="_blank" rel="noopener">Employee Login System</a>
+          <span class="meta">
+            <span class="stack">JAVA · SQL · AUTH</span>
+            <span class="go">
+              <a href="https://github.com/ArmaanChahal" target="_blank" rel="noopener" aria-label="Source"><svg class="ico"><use href="#i-github"/></svg></a>
+            </span>
+          </span>
+          <span class="thumb"><img src="images/login.jpg" alt="Employee Login System preview" loading="lazy" decoding="async"></span>
+        </div>
+
+        <div class="item" data-img="images/tictactoe.png">
+          <span class="no">09</span>
+          <a class="name" href="https://github.com/ArmaanChahal/TicTacToe-bot" target="_blank" rel="noopener">Tic Tac Toe Bot</a>
+          <span class="meta">
+            <span class="stack">C++ · MINIMAX</span>
+            <span class="go">
+              <a href="https://github.com/ArmaanChahal/TicTacToe-bot" target="_blank" rel="noopener" aria-label="Source"><svg class="ico"><use href="#i-github"/></svg></a>
+            </span>
+          </span>
+          <span class="thumb"><img src="images/tictactoe.png" alt="Tic Tac Toe Bot preview" loading="lazy" decoding="async"></span>
+        </div>
+
+        <div class="item" data-img="images/connect-N.png">
+          <span class="no">10</span>
+          <a class="name" href="https://github.com/ArmaanChahal/Connect-N" target="_blank" rel="noopener">Connect-N</a>
+          <span class="meta">
+            <span class="stack">JAVA · R</span>
+            <span class="go">
+              <a href="https://github.com/ArmaanChahal/Connect-N" target="_blank" rel="noopener" aria-label="Source"><svg class="ico"><use href="#i-github"/></svg></a>
+            </span>
+          </span>
+          <span class="thumb"><img src="images/connect-N.png" alt="Connect-N preview" loading="lazy" decoding="async"></span>
+        </div>
+      </div>
+
+      <!-- group D -->
+      <div class="cat-group" data-reveal>
+        <div class="cat-head"><span>Algorithms &amp; Data</span><span class="ln"></span><span class="ct">02</span></div>
+
+        <div class="item" data-img="images/NP-hard-a.png">
+          <span class="no">11</span>
+          <a class="name" href="https://github.com/ArmaanChahal/NP-hard-time-analysis" target="_blank" rel="noopener">NP-Hard Time Analysis</a>
+          <span class="meta">
+            <span class="stack">COMPLEXITY THEORY</span>
+            <span class="go">
+              <a href="https://github.com/ArmaanChahal/NP-hard-time-analysis" target="_blank" rel="noopener" aria-label="Source"><svg class="ico"><use href="#i-github"/></svg></a>
+            </span>
+          </span>
+          <span class="thumb"><img src="images/NP-hard-a.png" alt="NP-Hard Time Analysis preview" loading="lazy" decoding="async"></span>
+        </div>
+
+        <div class="item" data-img="images/MCDM.png">
+          <span class="no">12</span>
+          <a class="name" href="https://github.com/ArmaanChahal/MCDM-using-topsis" target="_blank" rel="noopener">MCDM using TOPSIS</a>
+          <span class="meta">
+            <span class="stack">PYTHON · TOPSIS</span>
+            <span class="go">
+              <a href="https://github.com/ArmaanChahal/MCDM-using-topsis" target="_blank" rel="noopener" aria-label="Source"><svg class="ico"><use href="#i-github"/></svg></a>
+            </span>
+          </span>
+          <span class="thumb"><img src="images/MCDM.png" alt="MCDM using TOPSIS preview" loading="lazy" decoding="async"></span>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Cursor Glow -->
-    <div class="cursor-glow"></div>
+    <div style="margin-top:54px" data-reveal>
+      <span class="mag"><a class="cta solid" href="contacts.html"><span>Work with me</span> <svg class="ico"><use href="#i-arrow"/></svg></a></span>
+    </div>
+  </div>
+</section>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container navbar-container">
-            <a class="navbar-brand" href="index.html">
-                <span class="brand-text">AC</span>
-            </a>
-            <button class="navbar-toggler" id="navbarToggler" aria-label="Toggle navigation">
-                <span class="toggler-line"></span>
-                <span class="toggler-line"></span>
-                <span class="toggler-line"></span>
-            </button>
-            <ul class="navbar-nav" id="navbarNav">
-                <li class="nav-item"><a class="nav-link" href="index.html"><span class="nav-number">01.</span> Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#about"><span class="nav-number">02.</span> About</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#experience"><span class="nav-number">03.</span> Experience</a></li>
-                <li class="nav-item"><a class="nav-link active" href="projects.html"><span class="nav-number">04.</span> Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html"><span class="nav-number">05.</span> Contact</a></li>
-                <li class="nav-item"><a class="btn btn-glow" href="resume_portfolio.pdf" target="_blank">Resume</a></li>
-            </ul>
-        </div>
-    </nav>
+<!-- floating preview (pointer devices) -->
+<div class="preview" id="preview"><img alt="" decoding="async"></div>
 
-    <!-- Projects Hero -->
-    <section class="page-hero">
-        <div class="container">
-            <div class="page-hero-content animate-in">
-                <span class="section-tag">Portfolio</span>
-                <h1 class="page-title">My Projects</h1>
-                <p class="page-subtitle">A curated collection of my work spanning AI/ML, web development, algorithms, and data analysis.</p>
-            </div>
-        </div>
-    </section>
+<!-- ===== FOOTER ===== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="index.html">AC<span class="dot">.</span></a>
+      <div class="social">
+        <a href="https://github.com/ArmaanChahal" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ico"><use href="#i-github"/></svg></a>
+        <a href="https://www.linkedin.com/in/armaanchahal" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico"><use href="#i-linkedin"/></svg></a>
+        <a href="mailto:armaanchahal1501@gmail.com" aria-label="Email"><svg class="ico"><use href="#i-mail"/></svg></a>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 Armaan Chahal</span>
+      <span class="colophon">Set in Fraunces, Hanken Grotesk &amp; JetBrains Mono</span>
+      <span>Designed &amp; built by <b>Armaan Chahal</b></span>
+    </div>
+  </div>
+</footer>
 
-    <!-- Featured Projects Section -->
-    <section class="projects section">
-        <div class="container">
-            <div class="section-header animate-in">
-                <span class="section-tag">Highlights</span>
-                <h2 class="section-title">Featured Work</h2>
-                <div class="title-decoration"></div>
-            </div>
-            
-            <div class="projects-grid">
-                <!-- Project 1 - NeuroVision AI -->
-                <article class="project-card featured animate-in" style="--delay: 0.1s">
-                    <div class="project-image">
-                        <img src="images/MRI.png" alt="NeuroVision AI">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://armaanchahal.github.io/MRI-scan/" target="_blank" class="overlay-btn">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="https://github.com/ArmaanChahal/MRI-scan" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">AI / Healthcare</span>
-                        <h3 class="project-title">NeuroVision AI</h3>
-                        <div class="project-description">
-                            <p>Deep learning-powered brain tumor classification system that analyzes MRI scans to identify cancer types. Built with a custom CNN architecture trained on AWS EC2 GPU instances, achieving high accuracy in multi-class classification.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>AWS</li>
-                            <li>Flask</li>
-                            <li>PyTorch</li>
-                            <li>HTML/CSS</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://armaanchahal.github.io/MRI-scan/" target="_blank" class="btn btn-sm">
-                                Live Demo <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/ArmaanChahal/MRI-scan" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+<button class="totop" id="totop" aria-label="Back to top"><svg class="ico"><use href="#i-up"/></svg></button>
 
-                <!-- Project 2 - DermaScan AI -->
-                <article class="project-card featured animate-in" style="--delay: 0.2s">
-                    <div class="project-image">
-                        <img src="images/Skin-lesion.png" alt="DermaScan AI">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://armaanchahal.github.io/Skin-Lesion-AI/" target="_blank" class="overlay-btn">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="https://github.com/ArmaanChahal/Skin-Lesion-AI" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">AI / Healthcare</span>
-                        <h3 class="project-title">DermaScan AI</h3>
-                        <div class="project-description">
-                            <p>Intelligent dermatological analysis platform implementing the ABCD rule for skin lesion assessment. Utilizes TensorFlow-based image classification trained on EC2 GPU instances for accurate disease detection.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>AWS</li>
-                            <li>Python</li>
-                            <li>TensorFlow</li>
-                            <li>HTML/CSS</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://armaanchahal.github.io/Skin-Lesion-AI/" target="_blank" class="btn btn-sm">
-                                Live Demo <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/ArmaanChahal/Skin-Lesion-AI" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project 3 - Weather Website -->
-                <article class="project-card featured animate-in" style="--delay: 0.3s">
-                    <div class="project-image">
-                        <img src="images/weather-website.png" alt="Weather Dashboard">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://armaanchahal.github.io/Weather-website/" target="_blank" class="overlay-btn">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="https://github.com/ArmaanChahal/Weather-website" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Web Development</span>
-                        <h3 class="project-title">Weather Dashboard</h3>
-                        <div class="project-description">
-                            <p>Dynamic weather application featuring real-time meteorological data integration. Displays temperature, forecasts, and wind conditions with adaptive UI that transforms based on current weather conditions.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Weather API</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://armaanchahal.github.io/Weather-website/" target="_blank" class="btn btn-sm">
-                                Live Demo <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/ArmaanChahal/Weather-website" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- All Projects Section -->
-    <section class="projects section" style="background: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-header animate-in">
-                <span class="section-tag">Complete Collection</span>
-                <h2 class="section-title">All Projects</h2>
-                <div class="title-decoration"></div>
-            </div>
-            
-            <div class="projects-grid">
-                <!-- Quiz Portal -->
-                <article class="project-card animate-in">
-                    <div class="project-image">
-                        <img src="images/quiz.png" alt="Quiz Portal">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://github.com/ArmaanChahal/Quiz" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Desktop Application</span>
-                        <h3 class="project-title">Quiz Portal</h3>
-                        <div class="project-description">
-                            <p>Interactive quiz application built in Java featuring user authentication, timed assessments, CSV-based question management, attempt tracking, and a competitive leaderboard system.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>Java</li>
-                            <li>Swing</li>
-                            <li>CSV</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/ArmaanChahal/Quiz" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Employee Login -->
-                <article class="project-card animate-in">
-                    <div class="project-image">
-                        <img src="images/login.jpg" alt="Employee Login Portal">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://github.com/ArmaanChahal" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Full Stack</span>
-                        <h3 class="project-title">Employee Login</h3>
-                        <div class="project-description">
-                            <p>Secure Java application implementing employee registration and login authentication with SQL database management. Features session handling and comprehensive error validation.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>Java</li>
-                            <li>SQL</li>
-                            <li>Authentication</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/ArmaanChahal" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Vacuum Cleaner Simulation -->
-                <article class="project-card animate-in">
-                    <div class="project-image">
-                        <img src="images/vacuum.png" alt="Vacuum Cleaner Simulation">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://github.com/ArmaanChahal/Vacuum-Cleaner" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">AI / Algorithms</span>
-                        <h3 class="project-title">Vacuum Cleaner Simulation</h3>
-                        <div class="project-description">
-                            <p>Python-based autonomous agent simulation implementing BFS, DFS, and A* algorithms for intelligent grid navigation and optimal coverage pathfinding strategies.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>Python</li>
-                            <li>Algorithms</li>
-                            <li>Pathfinding</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/ArmaanChahal/Vacuum-Cleaner" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Tic Tac Toe -->
-                <article class="project-card animate-in">
-                    <div class="project-image">
-                        <img src="images/tictactoe.png" alt="Tic Tac Toe">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://github.com/ArmaanChahal/TicTacToe-bot" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Game Development</span>
-                        <h3 class="project-title">Tic Tac Toe</h3>
-                        <div class="project-description">
-                            <p>C++ implementation featuring an intelligent AI opponent using minimax algorithm. Supports both two-player and player vs. computer modes with optimal move calculation.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>C++</li>
-                            <li>Game Dev</li>
-                            <li>AI</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/ArmaanChahal/TicTacToe-bot" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Connect-N -->
-                <article class="project-card animate-in">
-                    <div class="project-image">
-                        <img src="images/connect-N.png" alt="Connect-N">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://github.com/ArmaanChahal/Connect-N" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Game Development</span>
-                        <h3 class="project-title">Connect-N</h3>
-                        <div class="project-description">
-                            <p>Configurable Connect-N game with customizable board dimensions and win conditions. Includes R-based time complexity analysis for board initialization performance.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>Java</li>
-                            <li>Game Dev</li>
-                            <li>R</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/ArmaanChahal/Connect-N" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Calculator -->
-                <article class="project-card animate-in">
-                    <div class="project-image">
-                        <img src="images/calculator.png" alt="Calculator">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://armaanchahal.github.io/Calculator/" target="_blank" class="overlay-btn">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="https://github.com/ArmaanChahal/Calculator" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Web Development</span>
-                        <h3 class="project-title">Calculator</h3>
-                        <div class="project-description">
-                            <p>Apple-inspired calculator with calculation history, real-time input display, and scientific mode. Clean UI with smooth animations and responsive design.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://armaanchahal.github.io/Calculator/" target="_blank" class="btn btn-sm">
-                                Live Demo <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/ArmaanChahal/Calculator" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Temperature Converter -->
-                <article class="project-card animate-in">
-                    <div class="project-image">
-                        <img src="images/temp-convertor.png" alt="Temperature Converter">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://armaanchahal.github.io/temp-converter/" target="_blank" class="overlay-btn">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="https://github.com/ArmaanChahal/temp-converter" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Web Development</span>
-                        <h3 class="project-title">Temperature Converter</h3>
-                        <div class="project-description">
-                            <p>Intuitive temperature conversion utility supporting Fahrenheit and Celsius with contextual feedback and dynamic weather-appropriate commentary.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://armaanchahal.github.io/temp-converter/" target="_blank" class="btn btn-sm">
-                                Live Demo <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/ArmaanChahal/temp-converter" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Analysis Projects Section -->
-    <section class="projects section">
-        <div class="container">
-            <div class="section-header animate-in">
-                <span class="section-tag">Research</span>
-                <h2 class="section-title">Analysis Projects</h2>
-                <div class="title-decoration"></div>
-            </div>
-            <p class="section-intro animate-in">
-                Technical analyses and research exploring algorithms, data science, and computational methods.
-            </p>
-            
-            <div class="projects-grid">
-                <!-- NP Hard Analysis -->
-                <article class="project-card animate-in">
-                    <div class="project-image">
-                        <img src="images/NP-hard-a.png" alt="NP Hard Analysis">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://github.com/ArmaanChahal/NP-hard-time-analysis" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Algorithms</span>
-                        <h3 class="project-title">NP Hard Analysis</h3>
-                        <div class="project-description">
-                            <p>Comprehensive study of NP-hard optimization problems exploring approximation algorithms and the computational complexity of finding near-optimal solutions in polynomial time.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>Algorithms</li>
-                            <li>Complexity Theory</li>
-                            <li>Analysis</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/ArmaanChahal/NP-hard-time-analysis" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- MCDM using TOPSIS -->
-                <article class="project-card animate-in">
-                    <div class="project-image">
-                        <img src="images/MCDM.png" alt="MCDM using TOPSIS">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="https://github.com/ArmaanChahal/MCDM-using-topsis" target="_blank" class="overlay-btn">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-label">Data Science</span>
-                        <h3 class="project-title">MCDM using TOPSIS</h3>
-                        <div class="project-description">
-                            <p>Implementation of the TOPSIS method for multi-criteria decision making, demonstrating advanced Python data analysis techniques for complex decision-making scenarios.</p>
-                        </div>
-                        <ul class="project-tech">
-                            <li>Python</li>
-                            <li>Data Analysis</li>
-                            <li>TOPSIS</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/ArmaanChahal/MCDM-using-topsis" target="_blank" class="btn btn-sm btn-outline">
-                                Source <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="brand-text">AC</span>
-                </div>
-                <div class="footer-links">
-                    <div class="social-links">
-                        <a href="https://github.com/ArmaanChahal" target="_blank" aria-label="GitHub" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/armaanchahal" target="_blank" aria-label="LinkedIn" class="social-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="mailto:armaanchahal1501@gmail.com" aria-label="Email" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>Designed & Built by <span class="gradient-text">Armaan Chahal</span></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTopBtn" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
