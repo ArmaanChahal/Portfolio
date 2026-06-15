@@ -129,6 +129,14 @@
     var heroName = document.getElementById("heroName");
     if (heroName && !reduceMotion) {
       var chars = heroName.querySelectorAll(".ch");
+      var rows = heroName.querySelectorAll(".row");
+      var lastCh = chars[chars.length - 1];
+      var unclipped = false;
+      var unclip = function () {
+        if (unclipped) return;
+        unclipped = true;
+        rows.forEach(function (r) { r.style.overflow = "visible"; });
+      };
       chars.forEach(function (ch, i) {
         ch.style.transition = "transform 0.9s cubic-bezier(0.16,1,0.3,1)";
         ch.style.transitionDelay = (0.25 + i * 0.045) + "s";
@@ -138,6 +146,8 @@
           chars.forEach(function (ch) { ch.style.transform = "translateY(0)"; });
         });
       });
+      if (lastCh) lastCh.addEventListener("transitionend", unclip, { once: true });
+      setTimeout(unclip, 2200); // safety net so the name never stays clipped
     }
 
     /* ---------- magnetic buttons ---------- */

@@ -884,6 +884,7 @@ mark.hl { background: none; color: var(--gold); }
     * { animation-duration: 0.001s !important; animation-iteration-count: 1 !important; transition-duration: 0.001s !important; scroll-behavior: auto !important; }
     .ground::before, .grain { animation: none; }
     .hero-name .ch { transform: none; }
+    .hero-name .row { overflow: visible; }
     .plot { stroke-dashoffset: 0; }
     .node-c, .node-x, .node-lab, .dim-lab, .pulse, .plot.thin { opacity: 1; }
     [data-reveal] { opacity: 1; transform: none; }
